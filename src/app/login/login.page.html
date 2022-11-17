@@ -1,0 +1,28 @@
+
+<ion-content>
+  <div class="card-container" style="height: 100%; width: 50%; content:justify; margin: auto; align-items:center; text-align:center ">
+    <ion-card >
+          <ion-card-header>
+            <ion-card-title> Log into </ion-card-title>
+          </ion-card-header>
+
+          <ion-card-content>
+            <ion-item *ngIf="showLoginForm" >
+              <ion-label position="floating">Username</ion-label>
+              <ion-input  [(ngModel)]="login" type="text" name="username"></ion-input>
+            </ion-item>
+            <ion-item *ngIf="showLoginForm" >
+              <ion-label position="floating">Password</ion-label>
+              <ion-input [(ngModel)]="password" type="password" name="password"></ion-input>
+            </ion-item>
+            <ion-button *ngIf="showLoginForm" shape="round" (click)="logInto()"color="primary"> Login </ion-button>
+            <ion-button *ngIf="showLoginForm" shape="round" (click)="loginForm()" color="primary"> Cancel </ion-button>
+          </ion-card-content>
+
+          <ion-card-content *ngIf="!showLoginForm">
+            <ion-button (click)="loginForm()" shape="round" color="primary"> Sign in </ion-button>
+          </ion-card-content>
+
+    </ion-card>
+  </div>
+</ion-content>

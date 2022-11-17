@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Register
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <div style="height: 100%; width: 100%; content:justify; margin: auto;"  >
+      <div>
+          <ion-list lines="full" class="ion-margin">
+          
+            <ion-item>
+              <ion-label position="floating">Name</ion-label>
+              <ion-input aria-required="true" [(ngModel)]="name" type="text" name="name" placeholder="Name"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label position="floating">Surname</ion-label>
+              <ion-input aria-required="true" [(ngModel)]="surname" type="text" name="surname" placeholder="Surname"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label position="floating">Login</ion-label>
+              <ion-input aria-required="true" [(ngModel)]="login" type="text" placeholder="Login"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input aria-required="true" [(ngModel)]="password" type="password" placeholder="Password"></ion-input>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label position="floating">App code</ion-label>
+              <ion-input aria-required="true" [(ngModel)]="code" type="password" maxlength="4" placeholder="App Code"></ion-input>
+            </ion-item>
+          
+            <ion-row>
+              <ion-col>
+                <ion-button type="button" (click)="addUser()" color="primary" shape="full" expand="block">
+                  Add User</ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-list>
+        </div>
+    
+  </div>
+  
+</ion-content>
